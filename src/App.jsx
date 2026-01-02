@@ -2,7 +2,6 @@
 import './App.css';
 
 //
-import { BrowserRouter as Router } from 'react-router-dom';
 import HomePage from './pages/home/index.jsx'; // Assume you have a HomePage component
 import ScrollSpyPage from './pages/scrollspy/index.jsx';
 import ChatbotPage from './pages/chatbot/index.jsx';
