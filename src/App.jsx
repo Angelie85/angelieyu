@@ -19,7 +19,7 @@ function App() {
         >
           Home
         </button>
-        |{' '}
+        {/* |{' '}
         <button
           onClick={() => {
             setCurrentComponent('scrollspy');
@@ -34,11 +34,11 @@ function App() {
           }}
         >
           Chatbot
-        </button>
+        </button> */}
       </nav>
       {currentComponent === 'home' && <HomePage />}
-      {currentComponent === 'scrollspy' && <ScrollSpyPage />}
-      {currentComponent === 'chatbot' && <ChatbotPage />}
+      {/* {currentComponent === 'scrollspy' && <ScrollSpyPage />}
+      {currentComponent === 'chatbot' && <ChatbotPage />} */}
     </div>
   );
 }
