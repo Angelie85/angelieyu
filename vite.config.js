@@ -10,8 +10,8 @@ export default defineConfig({
       },
     }),
   ],
-  // base: '/angelieyu/',
-  base: '/',
+  base: '/angelieyu/',
+  // base: '/',
   optimizeDeps: {
     esbuildOptions: {
       loader: {
