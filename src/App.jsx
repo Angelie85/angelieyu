@@ -18,7 +18,7 @@ function App() {
         {/* Navigation links can go here or in a separate Navbar component */}
         <Routes>
           {/* Define a route for the home page */}
-          <Route path="/" element={<HomePage />} />
+          <Route path="/angelieyu" element={<HomePage />} />
           {/* Define a route for your new about page */}
           <Route path="/scrollspy" element={<ScrollSpy />} />
           {/* Define a route for your new about page */}
