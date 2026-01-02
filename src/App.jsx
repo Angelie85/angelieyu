@@ -18,7 +18,7 @@ function App() {
           }}
         >
           Home
-        </button>{' '}
+        </button>
         |{' '}
         <button
           onClick={() => {
@@ -26,7 +26,7 @@ function App() {
           }}
         >
           Scrollspy
-        </button>{' '}
+        </button>
         |
         <button
           onClick={() => {
@@ -34,17 +34,11 @@ function App() {
           }}
         >
           Chatbot
-        </button>{' '}
+        </button>
       </nav>
       {currentComponent === 'home' && <HomePage />}
       {currentComponent === 'scrollspy' && <ScrollSpyPage />}
       {currentComponent === 'chatbot' && <ChatbotPage />}
-      {/* Navigation links can go here or in a separate Navbar component */}
-      {/* <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/scrollspy" element={<ScrollSpy />} />
-          <Route path="/chatbot" element={<ChatbotPage />} />
-        </Routes> */}
     </div>
   );
 }
