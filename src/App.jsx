@@ -2,30 +2,51 @@
 import './App.css';
 
 //
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import HomePage from './pages/home/index.jsx'; // Assume you have a HomePage component
-import ScrollSpy from './pages/scrollspy/index.jsx'; // Import your new page
-import Test from './pages/chatbot/index.jsx';
+import ScrollSpyPage from './pages/scrollspy/index.jsx';
 import ChatbotPage from './pages/chatbot/index.jsx';
+import { useState } from 'react';
 
 function App() {
+  const [currentComponent, setCurrentComponent] = useState('home');
   return (
-    <Router>
-      <div className="App">
-        <nav>
-          <Link to="/">Home</Link>
-        </nav>
-        {/* Navigation links can go here or in a separate Navbar component */}
-        <Routes>
-          {/* Define a route for the home page */}
-          <Route path="/angelieyu" element={<HomePage />} />
-          {/* Define a route for your new about page */}
+    <div className="App">
+      <nav>
+        <button
+          onClick={() => {
+            setCurrentComponent('home');
+          }}
+        >
+          Home
+        </button>{' '}
+        |{' '}
+        <button
+          onClick={() => {
+            setCurrentComponent('scrollspy');
+          }}
+        >
+          Scrollspy
+        </button>{' '}
+        |
+        <button
+          onClick={() => {
+            setCurrentComponent('chatbot');
+          }}
+        >
+          Chatbot
+        </button>{' '}
+      </nav>
+      {currentComponent === 'home' && <HomePage />}
+      {currentComponent === 'scrollspy' && <ScrollSpyPage />}
+      {currentComponent === 'chatbot' && <ChatbotPage />}
+      {/* Navigation links can go here or in a separate Navbar component */}
+      {/* <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route path="/scrollspy" element={<ScrollSpy />} />
-          {/* Define a route for your new about page */}
           <Route path="/chatbot" element={<ChatbotPage />} />
-        </Routes>
-      </div>
-    </Router>
+        </Routes> */}
+    </div>
   );
 }
 
