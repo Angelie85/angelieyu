@@ -12,11 +12,4 @@ export default defineConfig({
   ],
   base: '/angelieyu/',
   // base: '/',
-  optimizeDeps: {
-    esbuildOptions: {
-      loader: {
-        '.js': 'jsx', // This tells esbuild to process .js files as jsx
-      },
-    },
-  },
 });
